@@ -11,11 +11,38 @@ public class Item {
     private String ingredientes;
 
     @ManyToOne()
-    @JoinColumn(name = "cardapio_id")
-    private Cardapio cardapio;
-
-    @OneToOne()
     @JoinColumn(name = "categoria_id")
     private Categoria categoria;
 
+    public Long getId() {
+        return id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getIngredientes() {
+        return ingredientes;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setIngredientes(String ingredientes) {
+        this.ingredientes = ingredientes;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
 }
